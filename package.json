@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/vladignatyev/crx-extractor/issues"
   },
+  "scripts": {
+    "clean": "rm -rf build/*",
+    "oldpackage": "cp -R css images js index.html about.html google*.html contact.html robots.txt sitemap.xml terms-of-use.html build/",
+    "server": "static-server -i index.html -f -d build/"
+  },
   "homepage": "https://github.com/vladignatyev/crx-extractor#readme"
 }
