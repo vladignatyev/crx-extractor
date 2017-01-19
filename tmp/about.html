@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>About CRX Extractor – Chrome Extension source code downloading tool</title>
+
+  <meta name="keywords" content="about, crx, chrome, extension, get, extract, download, source, code"/>
+  <meta name="description" content="About page of .crx file extractor explains how that works and which tools have been used to make it working."/>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Vladimir Ignatev">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+<body>
+  <div class="breakthrough center nomargin">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- CRXExtractor Top -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:728px;height:90px"
+         data-ad-client="ca-pub-9423687387443767"
+         data-ad-slot="3613922026"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <div class="with-background">
+    <div class="row">
+      <div class="logo center"><a href="/"><img src="images/logo.png" height="50" alt="crx extractor logo" /></a></div>
+      <h3 class="center">Investigate and hack any Chrome Extension <br/>from the Chrome WebStore.</h3>
+      <div class="center"><a href="/" class="button button-primary" tabindex="1">Start</a></div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+    <div class="article container">
+<!--
+      <div class="breakthrough border-top border-bottom row center">
+        <img src="images/adsense-sample.png" class="adsense-sample"/>
+      </div>
+ -->
+      <div class="row">
+        <div class="eight columns">
+          <h1>About</h1>
+          <p>This tool was created to make it possible to anyone easily download
+            .CRX files of Chrome Extensions and to extract source code of any Chrome Extension published at Chrome WebStore.</p>
+          <p>If you've found some bugs or you want request an improvement, please reach us via e-mail <a href="mailto:crxextractor@gmail.com">crxextractor@gmail.com</a>!</p>
+          <p>Other contacts may be found on the <a href="contact.html">contact page</a>.</p>
+
+          <h2>How that works?</h2>
+          <h3>File format</h3>
+          <p>This tool parses .CRX version 2 format documented by Google. In general, .CRX file format consist of few parts:<p>
+            <ol>
+              <li>Magic header</li>
+              <li>Version of file format</li>
+              <li>Public Key information and a package signature</li>
+              <li>Zipped contents of the extension source code</li>
+            </ol>
+          <p>Magic header is a signature of the file telling that this file is Chrome Extension.
+            Using this header the operating system can determine the actual type of the file (MIME type is <code>application/x-chrome-extension</code>),
+            and how should it be treaten (is it executable? is it a text file?). Then the window system can show beautiful icon to the user.</p>
+          <p>In .CRX files the magic header has a constant value <code>Cr24</code> or <code>0x43723234</code>.</p>
+          <p>The version is provided by vendor. The version bytes are <code>0x02000000</code>.</p>
+          <p>The next part of the file contains the length of the public key information and the length of a digital signature.</p>
+          <p>All .CRX packages distributed via Chrome WebStore should have public
+            key information and digital signature in order to make possible for
+            browser to check that the package has been transmitted without
+            modifications and that no additions or replacements were made.</p>
+          <p>After all of the header stuff, typically ending up on 307'th byte,
+            comes the code of extension, stored as zip-archive. So the remainder
+            of the .crx file is the well-known .zip archive.</p>
+          <img width="100%" src="images/crx-file-opened-in-hex-editor.png" alt=".crx file opened in the hex editor called HexFiend (on Mac)" />
+          <p>The header part of a .crx file selected on the picture above. Obviously,
+            you can extract the remaining .zip archive "by hand" using any simple hex editor.
+            In this example, we use handy HexFiend editor on Mac.</p>
+          <p>The CRX Extractor loads a file provided, checks a magic header, version and trims
+            the file, so only .zip archive remains. Then it returns obtained .zip archive to user.</p>
+          <h3>Further steps on diving into extensions source code</h3>
+          <p>While playing around with content available on the Chrome WebStore
+            you will find out that some of extensions contain well-documented
+            and easy to read source code in HTML/CSS/Javascript. But some of them not. Like on the picture below.</p>
+          <img width="100%" src="images/minified-javascript-source-code-example.png" alt="look of the minified Javascript source code of some extension" />
+          <p>Modifying a source code this way called minification (or obfuscation)
+            and is done automatically with the help of special software tools called minifiers.
+            This operation reduces the size of a footprint of an extension and make
+            it loads faster. But sometimes this technique could be used to hide
+            something interesting from prying eyes, making the reading and
+            researching the behaviour of such programs very hard.
+            In this way it is called obfuscation (and the corresponding tool called obfuscator).</p>
+          <p>There are a number of such tools, which you can easily get googled.
+            Anyway, the investigating of minified and obfuscated code is much harder.</p>
+          <p>This tool allows you easily download CRX file extension and extract
+            only Chrome Extension source code.</p>
+
+          <!-- <p>Chrome Extensions are <code>.crx</code> files, </p> -->
+          <h2>Tools used</h2>
+          <p>This site is built using an awesome responsive CSS boilerplate called <a href="http://getskeleton.com/" rel="nofollow">Skeleton</a>.</p>
+          <p>The &ldquo;open in new window&rdquo; icon is a part of Typicons webfont,
+            created by s-ings and distributed under the terms of <a href="https://creativecommons.org/licenses/by-sa/3.0/" rel="nofollow">CC BY-SA license</a>.</p>
+          <p>All bytes choping-cropping made with Javascript and jQuery framework, using FileReader, DataView and other HTML5 features.</p>
+          <p>You are free to learn, modify, download, redistribute the code of this site.
+            The source code could be obtained on <a href="https://github.com/vladignatyev/crx-extractor" target="_blank">the official GitHub repository of this project<span class="typcn typcn-tabs-outline"></span></a>.</p>
+        </div>
+        <div class="four columns">
+          <div class="adsense-wrapper hide-small">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- CRXExtractor Side -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:300px;height:600px"
+                 data-ad-client="ca-pub-9423687387443767"
+                 data-ad-slot="5090655229"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="breakthrough border-top border-bottom row center">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- CRXExtractor Bottom -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-9423687387443767"
+             data-ad-slot="8044121628"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="footer-wrapper">
+    <div class="footer container">
+      <div class="row">
+        <div class="six columns copyrights hide-small">
+          <p>&copy; 2016 CRXExtractor.<br/>
+          &copy; 2015 Google Inc, used with permission. Google, Chrome, Chrome WebStore are&nbsp;registered trademarks of Google Inc.</p>
+          <p>Photo of Felix Lindner by Die Welt, "Wie "gute" Hacker Firmen im Cyberkrieg helfen"</p>
+          <br/>
+          <!-- Place this tag where you want the button to render. -->
+          <a class="github-button" href="https://github.com/vladignatyev" data-style="mega" data-count-href="/vladignatyev/followers" data-count-api="/users/vladignatyev#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @vladignatyev on GitHub">Follow @vladignatyev</a>
+          <a class="github-button" href="https://github.com/vladignatyev/crx-extractor" data-icon="octicon-star" data-style="mega" data-count-href="/vladignatyev/crx-extractor/stargazers" data-count-api="/repos/vladignatyev/crx-extractor#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star vladignatyev/crx-extractor on GitHub">Star</a>
+
+        </div>
+        <div class="two columns copyrights">&nbsp;</div>
+        <div class="three columns links">
+          <a href="https://twitter.com/intent/tweet?screen_name=crxextractor" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @CRXExtractor</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="terms-of-use.html">Terms Of Use</a><br/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="css/stylesheet.css" lazyload>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" lazyload>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82390179-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>

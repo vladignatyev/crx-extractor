@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Get .CRX Chrome Extension file, it's source code and download .CRX to your computer.</title>
+
+  <meta name="keywords" content="crx, chrome, extension, get, extract, download, source, code"/>
+  <meta name="description" content="Get Chrome Extension as .crx file and extract it's source code in one click, right in your browser."/>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="author" content="Vladimir Ignatev">
+
+  <link rel="icon" type="image/png" href="images/favicon.png">
+<body>
+  <div class="breakthrough center nomargin">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- CRXExtractor Top -->
+    <ins class="adsbygoogle"
+         style="display:inline-block;width:728px;height:90px"
+         data-ad-client="ca-pub-9423687387443767"
+         data-ad-slot="3613922026"></ins>
+    <script>
+    (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+  </div>
+
+  <div class="tool-wrapper">
+    <div class="logo center"><img src="images/logo.png" height="50" alt="crx extractor logo" /></div>
+    <div class="welcome">
+
+      <div class="header-wrapper">
+        <h1>Get .crx Chrome Extension file <br/>and extract source code in&nbsp;one click</h1>
+      </div>
+
+      <div class="cta-wrapper center">
+        <button class="button-primary cta-button" tabindex="1">Let's start</button>
+      </div>
+    </div>
+
+    <div class="tool container" style="display: none;">
+      <div class="row">
+        <div class="seven columns">
+          <h3 class="center">Get source code</h3>
+          <div id="drop-zone">
+              <div class="thanks" style="display: none;">
+                <p>You're awesome! Thank you! &#x2764;</p>
+              </div>
+              <div class="ui-wrapper">
+                <p>Drop .crx file here or click <br/>the button to choose the file</p>
+                <input type="file" name="file" id="file" tabindex="5" />
+              </div>
+              <div class="download-btn-wrapper">
+                <a href="#" style="display:none;" tabindex="6" class="download button button-primary">Download source</a>
+              </div>
+          </div>
+          <div class="download-source-err" style="display: none;">
+            <p></p>
+          </div>
+        </div>
+        <div class="five columns">
+          <div class="container">
+            <div class="row">
+              <div class="twelve columns">
+                <h3 class="center">Download&nbsp;.CRX&nbsp;file</h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="twelve columns">
+                <input type="text" tabindex="2" id="crx-download-input" class="u-full-width" placeholder="URL from Chrome WebStore" />
+                <button class="download-crx-ok button-primary" tabindex="3">OK</button>
+                <a href="#" style="display: none;" class="download-crx button button-primary" tabindex="4">Get .CRX</a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="twelve columns">
+                <div class="download-crx-err" style="display: none;">
+                  <p></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="article-wrapper">
+    <div class="article container">
+
+      <div class="breakthrough row">
+        <div class="row">
+          <h3 class="center">Turn any Chrome extension into white box. <br/>Learn from code, debug and pentest it!</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="four columns">
+          <h3>How to use it?</h3>
+          <ol>
+            <li>Drop the <code>.crx</code> file into the placeholder</li>
+            <li>Wait until it will be processed</li>
+            <li>Click "Download" and get source code as .zip archive with all related metadata</li>
+          </ol>
+          <h3>How to get .crx Chrome Extension File?</h3>
+          <ol>
+            <li>Head your browser to <a href="https://chrome.google.com/webstore/category/extensions" target="_blank" rel="nofollow">Chrome WebStore<span class="typcn typcn-tabs-outline"></span></a></li>
+            <li>Find an extension you want to save, then copy a link from the address line of your browser</li>
+            <li>Paste copied link to the field in the right pane and click "OK". Then click appeared button. The download will&nbsp;start immediately.</li>
+          </ol>
+        </div>
+        <div class="four columns">
+          <h3>How that works?</h3>
+
+          <p><strong>CRX Extractor</strong> has been created with the help
+          &nbsp;of&nbsp;an&nbsp;official Google documentation describing
+          <code>.crx</code> Chrome Extensions file format.</p>
+          <p>To&nbsp;get a&nbsp;Chrome Extension source code, the utility parses the&nbsp;provided
+          .crx file, extracts 'magic' header and stored code signature.</p>
+          <p>Along with meta-data, the .crx file contains .zip-archive. This archive
+          contains the extension manifest, source code, popup.html and all&nbsp;related
+          source files.</p>
+          <p>Want to know more about this tool and about the .CRX file format?
+          Check <a href="about.html">the about page</a>!</p>
+
+        </div>
+        <div class="four columns">
+          <div class="adsense-wrapper hide-small">
+            <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+            <!-- CRXExtractor Side -->
+            <ins class="adsbygoogle"
+                 style="display:inline-block;width:300px;height:600px"
+                 data-ad-client="ca-pub-9423687387443767"
+                 data-ad-slot="5090655229"></ins>
+            <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+          </div>
+        </div>
+      </div>
+      <div class="breakthrough border-top border-bottom row center">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- CRXExtractor Center -->
+        <ins class="adsbygoogle"
+             style="display:inline-block;width:728px;height:90px"
+             data-ad-client="ca-pub-9423687387443767"
+             data-ad-slot="6567388426"></ins>
+        <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <h3>Motivation</h3>
+          <p>The problem of Chrome Extensions security is well-known. Extensions
+            have enormous power, because they allowed to access history and cookies
+            of your browser and even change the content of the page you look at.
+            This opens a huge amount of vectors for fishing attacks and spyware,
+            opening opportunities for a lot kinds of malicious code.</p>
+            <p>Attackers can track your behaviour in Internet and your geolocation
+              as well. They can steal your Facebook account or authentication cookies
+              for online banking site you use.</p>
+          <p>The fact that the <code>.crx</code> format documented doesn't make
+            it easily to manipulate. That's why this tool was created.</p>
+          <p>If you get Chrome Extension source code from .crx, you may research
+            it's behaviour, find a malicious code, and easily learn from code
+            to build better user experiences and improve Chrome browser use cases
+            and defend yourself.</p>
+          <h3>Learn more</h3>
+          <ol>
+            <li>Learn how to create your first Chrome Extension <br/>with <a href="https://developer.chrome.com/extensions/getstarted" rel="nofollow" target="_blank">Getting Started guide<span class="typcn typcn-tabs-outline"></span></a></li>
+            <li><a href="https://developer.chrome.com/extensions/crx#scripts" rel="nofollow" target="_blank">Packaging of a Chrome Extension into .crx<span class="typcn typcn-tabs-outline"></span></a></li>
+            <li><a href="http://www.darkreading.com/risk-management/google-chrome-extensions-6-security-facts/d/d-id/1103551" rel="nofollow" target="_blank">Google Chrome Extensions: 6 Security Facts<span class="typcn typcn-tabs-outline"></span></a></li>
+          </ol>
+        </div>
+        <div class="six columns">
+          <h3>Privacy and personal data</h3>
+          <p>The service allows you to easily get Chrome Extension source code
+          without need in&nbsp;using advanced tools like hex-editor, turning the&nbsp;extraction
+          into an automated process. Furthemore, this tool doesn't use any&nbsp;server-side
+          code and operates only on the side of&nbsp;a&nbsp;browser. It doesn't store
+          any of&nbsp;your personal data, protecting your privacy and rights.</p>
+
+          <h3>Copyrights notice</h3>
+          <p>The .crx extractor itself is distributed as is, under terms of GNU GPL v3.
+          To obtain a source code of the tool, use the GitHub link from the footer.</p>
+          <p>Please use all the data you obtain using the tool with the respect to
+          assigned copyrights. Don't redistribute or modify obtained content
+          if&nbsp;you aren't permitted to act.</p>
+
+          <h3>Communicate</h3>
+          <p>
+            We are at the ProductHunt and Twitter! Rate us, follow us, suggest us better idea!
+          </p>
+          <iframe src="http://c.yvoschaap.com/producthunt/counter.html#href=http%3A%2F%2Fwww.producthunt.com%2Fr%2F339d34a3779743%2F73424&layout=tall" width="56" height="65" scrolling="no" frameborder="0" allowtransparency="true"></iframe><br/>
+          <a href="https://twitter.com/intent/tweet?screen_name=crxextractor" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @CRXExtractor</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+    </div>
+
+    <div class="breakthrough center nomargin">
+      <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- CRXExtractor Bottom -->
+      <ins class="adsbygoogle"
+           style="display:inline-block;width:728px;height:90px"
+           data-ad-client="ca-pub-9423687387443767"
+           data-ad-slot="8044121628"></ins>
+      <script>
+      (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
+
+
+    <div class="breakthrough row">
+      <div class="row">
+        <h3 class="center" style="margin-bottom:4rem;">&ldquo;Once you have a malicious extension in your Chrome browser, <br/>you're pretty much f***ed!&rdquo;</h3>
+        <p style="margin: 0 auto; width: 40rem;">
+          <img alt="Felix Lindner, Head of Recurity Labs, photo by Die Welt"
+              src="images/felix-lindner.png" height="64"
+            style="float:left; margin-right: 1rem; margin-top:-1rem;" />
+          <em>Felix Lindner</em><br/>Head of Recurity Labs, at&nbsp;BlackHat Europe</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-wrapper">
+    <div class="footer container">
+      <div class="row">
+        <div class="six columns copyrights hide-small">
+          <p>&copy; 2016 CRXExtractor.<br/>
+          &copy; 2015 Google Inc, used with permission. Google, Chrome, Chrome WebStore are&nbsp;registered trademarks of Google Inc.</p>
+          <p>Photo of Felix Lindner by Die Welt, "Wie "gute" Hacker Firmen im Cyberkrieg helfen"</p>
+          <br/>
+          <!-- Place this tag where you want the button to render. -->
+          <a class="github-button" href="https://github.com/vladignatyev" data-style="mega" data-count-href="/vladignatyev/followers" data-count-api="/users/vladignatyev#followers" data-count-aria-label="# followers on GitHub" aria-label="Follow @vladignatyev on GitHub">Follow @vladignatyev</a>
+          <a class="github-button" href="https://github.com/vladignatyev/crx-extractor" data-icon="octicon-star" data-style="mega" data-count-href="/vladignatyev/crx-extractor/stargazers" data-count-api="/repos/vladignatyev/crx-extractor#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star vladignatyev/crx-extractor on GitHub">Star</a>
+
+        </div>
+        <div class="two columns copyrights">&nbsp;</div>
+        <div class="three columns links">
+          <a href="https://twitter.com/intent/tweet?screen_name=crxextractor" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @CRXExtractor</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+          <iframe src="http://c.yvoschaap.com/producthunt/counter.html#href=http%3A%2F%2Fwww.producthunt.com%2Fr%2F339d34a3779743%2F73424&layout=tall" width="56" height="65" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="terms-of-use.html">Terms Of Use</a><br/>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="css/stylesheet.css" lazyload>
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway" lazyload>
+
+  <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript">
+  $(function(){
+    var downloadCrxButton = $('.download-crx');
+    var downloadCrxOkButton = $('.download-crx-ok');
+    var downloadCrxInput = $('#crx-download-input');
+
+    var downloadCrxError = $('.download-crx-err');
+
+    function showCrxDownloadError(msg) {
+      console.error(msg);
+      downloadCrxError.find('p').html(msg);
+      downloadCrxError.fadeIn('fast');
+    }
+
+    function hideCrxDownloadError() {
+      downloadCrxError.fadeOut('fast');
+    }
+
+    function getExtensionIdFromLink(link) {
+      var r = /^https:\/\/chrome\.google\.com\/webstore\/detail\/([^\/]+)\/([^\/]+)$/g;
+      if (!link.match(r)) {
+        return;
+      }
+      return (r.exec(link))[2];
+    }
+
+    function buildDownloadLink(extensionId) {
+      var baseUrl = 'https://clients2.google.com/service/update2/crx?response=redirect&prodversion=49.0&x=id%3D***%26installsource%3Dondemand%26uc';
+      var replacer = '***';
+      return baseUrl.replace(replacer, extensionId);
+    }
+
+    downloadCrxOkButton.click(function(){
+      hideCrxDownloadError();
+
+      var rawLink = downloadCrxInput.val();
+      var extensionId = getExtensionIdFromLink(rawLink);
+      var downloadLink = buildDownloadLink(extensionId);
+
+      if (!extensionId || !downloadLink) {
+        showCrxDownloadError('The provided link is not a Chrome Extension link from Chrome WebStore.');
+        return;
+      }
+
+      downloadCrxButton.attr('href', downloadLink);
+      downloadCrxButton.prop('download', 'extension.crx');
+      downloadCrxOkButton.fadeOut('fast', function(){
+        downloadCrxButton.fadeIn('fast');
+      });
+      return true;
+    });
+
+    downloadCrxButton.click(function(){
+      downloadCrxButton.fadeOut('fast', function(){
+        downloadCrxOkButton.fadeIn('fast');
+        downloadCrxInput.val('');
+      });
+    });
+
+  });
+  </script>
+  <script type="text/javascript">
+
+    var CRXFileParser = function(file) {
+      var self = this;
+
+      self.file = file;
+
+      this._formatUint32 = function (uint) {
+        var s = uint.toString(16);
+        while (s.length < 8) {
+          s = '0' + s;
+        }
+        return '0x' + s;
+      };
+
+      this._formatCharString = function (uint) {
+        var s = this._formatUint32(uint);
+        s = s.substr(2, 8);
+        var o = '';
+        for (var i = 0; i < 4; i++) {
+          o += String.fromCharCode(parseInt(s.substr(i << 1, 2), 16));
+        }
+        return o;
+      }
+
+      this.parse = function (dataView, arrayBuffer) {
+        var magic = dataView.getUint32(0);
+
+        if (magic == 0x43723234) { // Cr24
+          console.info('Magic is OK: ' + this._formatUint32(magic) + ' ' + this._formatCharString(magic));
+        } else {
+          console.error('Magic is broken: ' + this._formatUint32(magic) + ' ' + this._formatCharString(magic));
+          return;
+        }
+
+        var version = dataView.getUint32(4);
+        console.info('Version is: ' + this._formatUint32(version));
+
+        var publicKeyLength = dataView.getUint32(8, true);
+        console.info('Public key length: ' + publicKeyLength);
+
+        var signatureLength = dataView.getUint32(12, true);
+        console.info('Signature length: ' + signatureLength);
+
+        var publicKeyBuffer = arrayBuffer.slice(16, 16 + publicKeyLength);
+        var signatureBuffer = arrayBuffer.slice(16 + publicKeyLength, 16 + publicKeyLength + signatureLength);
+
+        var zipArchiveBuffer = arrayBuffer.slice(16 + publicKeyLength + signatureLength);
+
+        return [zipArchiveBuffer, publicKeyBuffer, signatureBuffer];
+      }
+
+      this.load = function (handler) {
+        var resultHandler = handler;
+
+        var reader = new FileReader();
+
+        reader.onload = function(event) {
+          var buffer = event.target.result;
+          var view = new DataView(buffer);
+          resultHandler(self.parse(view, buffer));
+        };
+
+        reader.onerror = function(event) {
+          resultHandler(undefined);
+        };
+
+        reader.readAsArrayBuffer(this.file);
+      }
+    };
+
+    $(function () {
+      var dropZoneId = "drop-zone";
+      var mouseOverClass = "mouse-over";
+
+      var dropZone = $("#" + dropZoneId);
+      var inputFile = dropZone.find("input");
+
+      var downloadSourceBtn = $(dropZone).find('.download');
+      var thanks = $(dropZone).find('.thanks');
+
+      var dropZoneUiWrapper = $(dropZone).find('.ui-wrapper');
+      var downloadSourceError = $('.download-source-err');
+
+      function getFileExtension(file) {
+        return file.name.substr(file.name.length-4).toUpperCase();
+      };
+
+      function getFilename(file) {
+        var chunks = file.name.split('.');
+        chunks.pop();
+        return chunks.join('.');
+      };
+
+      function showErrorMessage(msg) {
+        console.error("User error message: " + msg);
+
+        downloadSourceError.find('p').html(msg);
+        downloadSourceError.fadeIn('fast');
+      };
+
+      function hideErrorMessage() {
+        downloadSourceError.fadeOut('fast');
+      };
+
+      function showDownloadButton() {
+        downloadSourceBtn.fadeIn('fast');
+        dropZoneUiWrapper.fadeOut('fast');
+      };
+
+      function showSourceDownloadDropzone(e) {
+        downloadSourceBtn.fadeOut('fast', function(){
+          thanks.fadeIn('slow', function(){
+            thanks.fadeOut('slow', function(){
+              dropZoneUiWrapper.fadeIn('slow');
+            });
+          });
+        });
+      };
+
+      $(downloadSourceBtn).click(showSourceDownloadDropzone);
+
+      function checkFileAndParse(file) {
+        if (file.type != 'application/x-chrome-extension' ||
+          getFileExtension(file) != '.CRX') {
+          showErrorMessage('This file seems to be of different file format. Please provide valid .CRX file.');
+          return;
+        }
+
+        var parser = new CRXFileParser(file);
+        parser.load(function(parsingResult){
+          if (!parsingResult) {
+            showErrorMessage('Unable to parse this file. The file may be broken or unknown error has occured.');
+            return;
+          }
+
+          var zipArchiveBuffer = parsingResult[0];
+          var outputFile = new Blob([zipArchiveBuffer], {type: 'application/zip'});
+
+          showDownloadButton();
+          downloadSourceBtn.attr('href', URL.createObjectURL(outputFile));
+          downloadSourceBtn.prop('download', getFilename(file) + '.zip');
+        });
+      };
+
+      $(dropZone).on("dragover", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropZone.addClass(mouseOverClass);
+      });
+
+      $(dropZone).on("dragleave", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+        dropZone.removeClass(mouseOverClass);
+      });
+
+      $(inputFile).on("change", function(e){
+        hideErrorMessage();
+
+        var files = $(inputFile).prop('files');
+        if (files.length > 1 || files.length == 0) {
+          showErrorMessage('You should put only one .CRX file at once.');
+          return;
+        }
+        checkFileAndParse(files[0]);
+      });
+
+      $('html').on("drop", function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        hideErrorMessage();
+
+        dropZone.removeClass(mouseOverClass);
+
+        if (typeof e.originalEvent.dataTransfer !== undefined &&
+          e.originalEvent.dataTransfer.files.length > 0) {
+          if (e.originalEvent.dataTransfer.files.length == 1) {
+            var file = e.originalEvent.dataTransfer.files[0];
+            checkFileAndParse(file);
+          } else {
+            showErrorMessage('You should put only one .CRX file at once.');
+          }
+        } else {
+          showErrorMessage('Only .CRX files supported!');
+        }
+      });
+  });
+  </script>
+  <script>
+  $(function(){
+    var ctaButton = $('.cta-button');
+    var welcomePane = $('.welcome');
+    var tool = $('.tool');
+
+    ctaButton.click(function(){
+      welcomePane.fadeOut('fast', function(){
+        tool.fadeIn('fast');
+      });
+    });
+  });
+  </script>
+
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-82390179-1', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>
