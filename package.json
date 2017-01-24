@@ -4,7 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "clean": "rm -rf build/* s3/*",
+    "oldpackage": "cp -R css images js index.html about.html google*.html contact.html robots.txt sitemap.xml terms-of-use.html build/",
+    "s3": "npm run clean && npm run oldpackage && cp -R build/* s3/",
+    "s3minifycss": "minify s3/js/app.js > s3/js/app.min.js && minify s3/css/stylesheet.css > s3/css/stylesheet.min.css && rm -rf s3/js/app.js s3/css/normalize.css s3/css/skeleton.css s3/css/stylesheet.css",
+    "s3gzip": "gzip -9 s3/css/*.css && gzip -9 s3/js/*.js && gzip -9 s3/*.html && find s3/. -name \"*.gz\" -type f -execdir sh -c 'mv -v {} $(basename {} .gz)' \\;",
+    "s3minifyhtml": "htmlmin -o s3/index.html.min s3/index.html && mv -f s3/index.html.min s3/index.html",
+    "s3build": "npm run clean && npm run s3 && npm run s3minifycss && npm run s3minifyhtml && npm run s3gzip",
+    "server": "static-server -i index.html -f -d s3/"
   },
   "repository": {
     "type": "git",
@@ -15,10 +22,9 @@
   "bugs": {
     "url": "https://github.com/vladignatyev/crx-extractor/issues"
   },
-  "scripts": {
-    "clean": "rm -rf build/*",
-    "oldpackage": "cp -R css images js index.html about.html google*.html contact.html robots.txt sitemap.xml terms-of-use.html build/",
-    "server": "static-server -i index.html -f -d build/"
-  },
-  "homepage": "https://github.com/vladignatyev/crx-extractor#readme"
+  "homepage": "https://github.com/vladignatyev/crx-extractor#readme",
+  "dependencies": {
+    "minify": "^2.0.13",
+    "node-minify": "^2.0.2"
+  }
 }
