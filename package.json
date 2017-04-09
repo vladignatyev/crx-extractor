@@ -11,7 +11,8 @@
     "s3gzip": "gzip -9 s3/css/*.css && gzip -9 s3/js/*.js && gzip -9 s3/*.html && find s3/. -name \"*.gz\" -type f -execdir sh -c 'mv -v {} $(basename {} .gz)' \\;",
     "s3minifyhtml": "htmlmin -o s3/index.html.min s3/index.html && mv -f s3/index.html.min s3/index.html",
     "s3build": "npm run clean && npm run s3 && npm run s3minifycss && npm run s3minifyhtml && npm run s3gzip",
-    "server": "static-server -i index.html -f -d s3/"
+    "server": "static-server -i index.html -f -d s3/",
+    "start": "npm run clean && npm run s3 && npm run s3minifycss && npm run s3minifyhtml && static-server -i index.html -f -d s3/"
   },
   "repository": {
     "type": "git",

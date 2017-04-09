@@ -31,7 +31,7 @@
   background: #222;
 }
 .tool-wrapper {
-  height: 600px;
+  height: 574px;
   background: #3c63e3;
   color: #fff;
   padding: 2rem;
@@ -88,6 +88,10 @@
   .hide-small {
     display: none;
   }
+}
+
+h3 {
+  font-size: 3rem;
 }
 
 .center {
@@ -183,8 +187,4 @@
 
 #crx-download-input {
   color: #000;
-}
-
-.tool {
-  padding-top: 7rem;
 }
