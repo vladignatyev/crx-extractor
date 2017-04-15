@@ -16,11 +16,14 @@ $(function(){
   }
 
   function getExtensionIdFromLink(link) {
-    var r = /^https:\/\/chrome\.google\.com\/webstore\/detail\/([^\/]+)\/([^\/]+)$/g;
-    if (!link.match(r)) {
+    var parser = document.createElement('a');
+    parser.href = link;
+    if (parser.host != 'chrome.google.com') {
       return;
     }
-    return (r.exec(link))[2];
+    var pathChunks = parser.pathname.split('/');
+    // the last chunk is extension id
+    return pathChunks[pathChunks.length-1];
   }
 
   function buildDownloadLink(extensionId) {
@@ -218,7 +221,7 @@ $(function () {
 
     var files = $(inputFile).prop('files');
     if (files.length > 1 || files.length == 0) {
-      showErrorMessage('You should put only one .CRX file at once.');
+      showErrorMessage('You should put only one .CRX file a time.');
       return;
     }
     checkFileAndParse(files[0]);
@@ -238,7 +241,7 @@ $(function () {
         var file = e.originalEvent.dataTransfer.files[0];
         checkFileAndParse(file);
       } else {
-        showErrorMessage('You should put only one .CRX file at once.');
+        showErrorMessage('You should put only one .CRX file a time.');
       }
     } else {
       showErrorMessage('Only .CRX files supported!');
