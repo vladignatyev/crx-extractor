@@ -21,9 +21,15 @@ $(function(){
     if (parser.host != 'chrome.google.com') {
       return;
     }
-    var pathChunks = parser.pathname.split('/');
+
+    var pathName = parser.pathname;
+    if (pathName.slice(-1) == '/') {     // if ends with '/',
+      pathName = pathName.slice(0, -1);  // cut it off
+    }
+    var pathChunks = pathName.split('/');
+
     // the last chunk is extension id
-    return pathChunks[pathChunks.length-1];
+    return pathChunks.pop();
   }
 
   function buildDownloadLink(extensionId) {
@@ -248,14 +254,49 @@ $(function () {
     }
   });
 });
+
 $(function(){
   var ctaButton = $('.cta-button');
   var welcomePane = $('.welcome');
   var tool = $('.tool');
+
+  var suggestionName = $('#crx-suggestion .name');
+  var suggestionLink = $('#crx-suggestion .link');
+  var newSuggestionBtn = $('#crx-suggestion i');
+
+  var crxExamples = [
+    ['AdBlock Plus', 'https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb'],
+    ['Blur', 'https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd'],
+    ['LastPass Free Password Manager', 'https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd'],
+    ['Mercury Reader', 'https://chrome.google.com/webstore/detail/mercury-reader/oknpjjbmpnndlpmnhmekjpocelpnlfdi'],
+    ['Pixlr', 'https://chrome.google.com/webstore/detail/pixlr-editor/icmaknaampgiegkcjlimdiidlhopknpk'],
+    ['Pushbullet', 'https://chrome.google.com/webstore/detail/pushbullet/chlffgpmiacpedhhbkiomidkjlcfhogd/'],
+    ['Awesome Screenshot', 'https://chrome.google.com/webstore/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj'],
+    ['ColorZilla', 'https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp'],
+  ];
+
+  var suggestion = 0;
+
+  function nextSuggestion() {
+    suggestion = suggestion + 1;
+    var ex = crxExamples[suggestion % crxExamples.length];
+    $(suggestionName).html(ex[0]);
+    $(suggestionLink).html(ex[1]);
+  }
+
+  $(newSuggestionBtn).click(function(){
+    nextSuggestion();
+  });
+
+  $(suggestionLink).click(function(){
+    $('#crx-download-input').val($(suggestionLink).html());
+  });
 
   ctaButton.click(function(){
     welcomePane.fadeOut('fast', function(){
       tool.fadeIn('fast');
     });
   });
+
+  nextSuggestion();
 });

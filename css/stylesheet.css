@@ -232,3 +232,26 @@ h3 {
 #crx-download-input {
   color: #000;
 }
+
+#crx-suggestion {
+  padding-top: 1em;
+}
+
+#crx-suggestion .name {
+  font-weight: bolder;
+}
+
+#crx-suggestion .link {
+  font-size: 0.9em;
+  opacity: 0.9;
+  font-family: monospace;
+  margin-left: 15px;
+  display: block;
+  word-break: break-all;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+#crx-suggestion i {
+  cursor: pointer;
+}
