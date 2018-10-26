@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf build/* s3/*",
-    "oldpackage": "cp -R css images js index.html about.html google*.html contact.html robots.txt sitemap.xml terms-of-use.html build/",
+    "oldpackage": "cp -R css images js index.html how-does-adblock-work.html about.html google*.html contact.html robots.txt sitemap.xml terms-of-use.html build/",
     "s3": "npm run clean && npm run oldpackage && cp -R build/* s3/",
     "s3minifycss": "minify s3/js/app.js > s3/js/app.min.js && minify s3/css/stylesheet.css > s3/css/stylesheet.min.css && rm -rf s3/js/app.js s3/css/normalize.css s3/css/skeleton.css s3/css/stylesheet.css",
     "s3gzip": "gzip -9 s3/css/*.css && gzip -9 s3/js/*.js && gzip -9 s3/*.html && find s3/. -name \"*.gz\" -type f -execdir sh -c 'mv -v {} $(basename {} .gz)' \\;",

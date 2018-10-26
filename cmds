@@ -1,0 +1,6 @@
+aws s3 cp /Users/ignatev/Projects/crx-extractor/ s3://crxextractor.com/ --recursive --exclude=".git/*"
+
+aws s3 cp /Users/ignatev/Projects/crx-extractor/js/jquery.min.js s3://crxextractor.com/js/jquery.min.js
+aws s3 cp /Users/ignatev/Projects/crx-extractor/css/typicons.eot s3://crxextractor.com/css/typicons.eot
+aws s3 cp /Users/ignatev/Projects/crx-extractor/css/typicons.ttf s3://crxextractor.com/css/typicons.ttf
+aws s3 cp /Users/ignatev/Projects/crx-extractor/css/typicons.woff s3://crxextractor.com/css/typicons.woff

@@ -34,65 +34,62 @@
 
   <div class="article-wrapper">
     <div class="article container">
-<!--
-      <div class="breakthrough border-top border-bottom row center">
-        <img src="images/adsense-sample.png" class="adsense-sample"/>
-      </div>
- -->
       <div class="row">
         <div class="eight columns">
-          <h1>About</h1>
-          <p>This tool was created to make it possible to anyone easily download
-            .CRX files of Chrome Extensions and to extract source code of any Chrome Extension published at Chrome WebStore.</p>
-          <p>If you've found some bugs or you want request an improvement, please reach us via e-mail <a href="mailto:crxextractor@gmail.com">crxextractor@gmail.com</a>!</p>
-          <p>Other contacts may be found on the <a href="contact.html">contact page</a>.</p>
+          <h1>How does Adblock work?</h1>
+          <em>Attention! Long-read!</em>
+          <h2>What is adblocker and how does an ads in the web work?</h2>
+          <p>I believe that everyone who surfs the web hates ads that pop out here and there,
+            asking you to buy something, to download some "free" stuff or do anything but
+            viewing the page you were looking for in Google so long.</p>
+          <p>But we know that advertising makes some profits for website owners. Lucky ones
+            can have thousands and dozens thousands dollars of monthly income. It enables
+            them to create more and more useful and valuable content. They build the web
+            we love and use everyday.</p>
+          <p>Not all ads make us angry. There are several types of ads especially annoying,
+            such as pop-up and pop-under ads, that either cover whole screen or turning
+            the page we were looking at into something strange to look at. Here is the place
+            where adblock solutions come to help, and in this article we cover the topic about
+            how do these adblockers work.</p>
+          <p>Huge publishers like Google are staying away from websites using "gray" techniques
+            to drive profits out of traffic. They use content filtering and ranking techniques
+             to defend user from aggressive ads.</p>
+          <p>It helps them keep content relevant to user's queries. They know, that theirs massive
+            profits backed with investors expectations highly depend on user satisfaction
+            and behaviour. If a user watches unrelevant, ugly, misspelled ads, it is very big chance
+            that user will skip further ads and possibly can churn away and stop using such
+            website or online product.</p>
+          <p>Not all site owners do like Google does. Also, Google can't control every possible ad,
+            because a lot of webmasters use ad networks for displaying ads that aren't
+            affiliated with Google.</p>
+          <p>You got the idea: Google improves ads on his own, but to control ads on user's
+            side user need some additional software. Such software exist and is called "adblockers".</p>
+          <h2>How do Adblockers work?</h2>
+          <p>Typically, ad-blocking works through filtering out a content on the page that
+            user interact with and removing out some blocks of text, images, javascripts or flash.
+            To decide what to remove, an adblocker use very simple rules created by developer.
+            No matter how sophisticated ads code is, it will have some features like specified HTML-tags or styles.
+            Developer finds such features and add them as rules for filtering.</p>
+          <p>For example, if a page contains an image with URL that contains word "ad" or "affiliate",
+            the image become a candidate for removal.</p>
+          <p>This is the browser-based adblocking. It is exactly how AdblockPlus works.</p>
+          <p>In addition to browser-based solutions, there are proxy-based solutions. For example,
+            AdblockPlus work in this manner on Android devices. The idea is to filter out not a content,
+            because AdblockPlus on Android have no access to content the user watch, but filter out HTTP
+            requests being used to get banner images or texts.</p>
+          <p>To achieve such filtering abilities, user run a HTTP-proxy server on his device, he does
+            it using AdblockPlus app, and configures network to drive all traffic through this proxy.</p>
+          <p>If you aren't familiar with Proxy Servers, just look to corresponding Wikipedia page.
+            Proxy server are easy to understand. And the concept is very straightforward.</p>
+          <h2>Adblock Plus</h2>
+          <p>Nowadays, more than 100 millions of devices have installed AdBlock Plus. It is the most
+            popular and sensational adblocker. It is free and open-source. </p>
+          <p>We can look into it's source code. You can grab it via <a href="https://github.com/adblockplus">Github mirror</a>
+            or get the complete build from the Chrome WebStore using CRXExtractor. The build for Google Chrome is available by the following link: <a href="https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb">https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb</a>. 
+            Just put this link into corresponding field and extract it using extractor tool.</p>
+          <p></p>
 
-          <h2>How that works?</h2>
-          <h3>File format</h3>
-          <p>This tool parses .CRX version 2 format documented by Google. In general, .CRX file format consist of few parts:<p>
-            <ol>
-              <li>Magic header</li>
-              <li>Version of file format</li>
-              <li>Public Key information and a package signature</li>
-              <li>Zipped contents of the extension source code</li>
-            </ol>
-          <p>Magic header is a signature of the file telling that this file is Chrome Extension.
-            Using this header the operating system can determine the actual type of the file (MIME type is <code>application/x-chrome-extension</code>),
-            and how should it be treaten (is it executable? is it a text file?). Then the window system can show beautiful icon to the user.</p>
-          <p>In .CRX files the magic header has a constant value <code>Cr24</code> or <code>0x43723234</code>.</p>
-          <p>The version is provided by vendor. The version bytes are <code>0x02000000</code>.</p>
-          <p>The next part of the file contains the length of the public key information and the length of a digital signature.</p>
-          <p>All .CRX packages distributed via Chrome WebStore should have public
-            key information and digital signature in order to make possible for
-            browser to check that the package has been transmitted without
-            modifications and that no additions or replacements were made.</p>
-          <p>After all of the header stuff, typically ending up on 307'th byte,
-            comes the code of extension, stored as zip-archive. So the remainder
-            of the .crx file is the well-known .zip archive.</p>
-          <img width="100%" src="images/crx-file-opened-in-hex-editor.png" alt=".crx file opened in the hex editor called HexFiend (on Mac)" />
-          <p>The header part of a .crx file selected on the picture above. Obviously,
-            you can extract the remaining .zip archive "by hand" using any simple hex editor.
-            In this example, we use handy HexFiend editor on Mac.</p>
-          <p>The CRX Extractor loads a file provided, checks a magic header, version and trims
-            the file, so only .zip archive remains. Then it returns obtained .zip archive to user.</p>
-          <h3>Further steps on diving into extensions source code</h3>
-          <p>While playing around with content available on the Chrome WebStore
-            you will find out that some of extensions contain well-documented
-            and easy to read source code in HTML/CSS/Javascript. But some of them not. Like on the picture below.</p>
-          <img width="100%" src="images/minified-javascript-source-code-example.png" alt="look of the minified Javascript source code of some extension" />
-          <p>Modifying a source code this way called minification (or obfuscation)
-            and is done automatically with the help of special software tools called minifiers.
-            This operation reduces the size of a footprint of an extension and make
-            it loads faster. But sometimes this technique could be used to hide
-            something interesting from prying eyes, making the reading and
-            researching the behaviour of such programs very hard.
-            In this way it is called obfuscation (and the corresponding tool called obfuscator).</p>
-          <p>There are a number of such tools, which you can easily get googled.
-            Anyway, the investigating of minified and obfuscated code is much harder.</p>
-          <p>This tool allows you easily download CRX file extension and extract
-            only Chrome Extension source code.</p>
 
-          <!-- <p>Chrome Extensions are <code>.crx</code> files, </p> -->
           <h2>Tools used</h2>
           <p>This site is built using an awesome responsive CSS boilerplate called <a href="http://getskeleton.com/" rel="nofollow">Skeleton</a>.</p>
           <p>The &ldquo;open in new window&rdquo; icon is a part of Typicons webfont,
