@@ -33,7 +33,7 @@ $(function(){
   }
 
   function buildDownloadLink(extensionId) {
-    var baseUrl = 'https://clients2.google.com/service/update2/crx?response=redirect&prodversion=49.0&x=id%3D***%26installsource%3Dondemand%26uc';
+    var baseUrl = 'https://clients2.google.com/service/update2/crx?response=redirect&prodversion=49.0&acceptformat=crx3&x=id%3D***%26installsource%3Dondemand%26uc';
     var replacer = '***';
     return baseUrl.replace(replacer, extensionId);
   }
