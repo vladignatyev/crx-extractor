@@ -188,8 +188,7 @@ $(function () {
   $(downloadSourceBtn).click(showSourceDownloadDropzone);
 
   function checkFileAndParse(file) {
-    if (file.type != 'application/x-chrome-extension' ||
-      getFileExtension(file) != '.CRX') {
+    if (getFileExtension(file) != '.CRX') {
       showErrorMessage('This file seems to be of different file format. Please provide valid .CRX file.');
       return;
     }

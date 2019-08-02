@@ -25,7 +25,11 @@
   },
   "homepage": "https://github.com/vladignatyev/crx-extractor#readme",
   "dependencies": {
+    "htmlmin": "0.0.7",
     "minify": "^2.0.13",
     "node-minify": "^2.0.2"
+  },
+  "devDependencies": {
+    "static-server": "^2.2.1"
   }
 }
