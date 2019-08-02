@@ -103,18 +103,27 @@ var CRXFileParser = function(file) {
     var version = dataView.getUint32(4);
     console.info('Version is: ' + this._formatUint32(version));
 
-    var publicKeyLength = dataView.getUint32(8, true);
-    console.info('Public key length: ' + publicKeyLength);
+    if (version <= 2) {
+      var publicKeyLength = dataView.getUint32(8, true);
+      console.info('Public key length: ' + publicKeyLength);
 
-    var signatureLength = dataView.getUint32(12, true);
-    console.info('Signature length: ' + signatureLength);
+      var signatureLength = dataView.getUint32(12, true);
+      console.info('Signature length: ' + signatureLength);
 
-    var publicKeyBuffer = arrayBuffer.slice(16, 16 + publicKeyLength);
-    var signatureBuffer = arrayBuffer.slice(16 + publicKeyLength, 16 + publicKeyLength + signatureLength);
+      var publicKeyBuffer = arrayBuffer.slice(16, 16 + publicKeyLength);
+      var signatureBuffer = arrayBuffer.slice(16 + publicKeyLength, 16 + publicKeyLength + signatureLength);
 
-    var zipArchiveBuffer = arrayBuffer.slice(16 + publicKeyLength + signatureLength);
+      var zipArchiveBuffer = arrayBuffer.slice(16 + publicKeyLength + signatureLength);
 
-    return [zipArchiveBuffer, publicKeyBuffer, signatureBuffer];
+      return [zipArchiveBuffer, publicKeyBuffer, signatureBuffer];
+    } else {
+      var headerLength = dataView.getUint32(8, true);
+      console.info('Header length: ' + headerLength);
+
+      var zipArchiveBuffer = arrayBuffer.slice(12 + headerLength);
+
+      return [zipArchiveBuffer, undefined, undefined];
+    }
   }
 
   this.load = function (handler) {
@@ -264,6 +273,9 @@ $(function(){
   var newSuggestionBtn = $('#crx-suggestion i');
 
   var crxExamples = [
+    ['Dark Reader', 'https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh'],
+    ['Custom Cursor For Chrome', 'https://chrome.google.com/webstore/detail/custom-cursor-for-chrome/ogdlpmhglpejoiomcodnpjnfgcpmgale'],
+    ['Block Site', 'https://chrome.google.com/webstore/detail/block-site-website-blocke/eiimnmioipafcokbfikbljfdeojpcgbh'],
     ['AdBlock Plus', 'https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb'],
     ['Blur', 'https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd'],
     ['LastPass Free Password Manager', 'https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd'],
