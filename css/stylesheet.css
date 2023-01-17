@@ -31,7 +31,6 @@
   background: #222;
 }
 .tool-wrapper {
-  height: 574px;
   background: #3c63e3;
   color: #fff;
   padding: 2rem;
@@ -50,7 +49,7 @@
 }
 
 .welcome h1 {
-  text-align: left;
+  text-align: center;
   font-size: 4rem;
 }
 
@@ -138,16 +137,9 @@ h3 {
   text-align: center;
 }
 
-.logo {
-  margin: 5rem 0;
-}
-
 .with-background .logo {
   margin: 1rem 0;
-}
-
-.header-wrapper h1 {
-  margin: 10rem 0 5rem 0;
+	text-align: center;
 }
 
 .adsense-top-side {

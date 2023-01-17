@@ -10,7 +10,7 @@
     "s3minifycss": "minify s3/js/app.js > s3/js/app.min.js && minify s3/css/stylesheet.css > s3/css/stylesheet.min.css && rm -rf s3/js/app.js s3/css/normalize.css s3/css/skeleton.css s3/css/stylesheet.css",
     "s3gzip": "gzip -9 s3/css/*.css && gzip -9 s3/js/*.js && gzip -9 s3/*.html && find s3/. -name \"*.gz\" -type f -execdir sh -c 'mv -v {} $(basename {} .gz)' \\;",
     "s3minifyhtml": "htmlmin -o s3/index.html.min s3/index.html && mv -f s3/index.html.min s3/index.html",
-    "s3build": "npm run clean && npm run s3 && npm run s3minifycss && npm run s3minifyhtml && npm run s3gzip",
+    "s3build": "npm run clean && npm run s3 && npm run s3minifycss && npm run s3minifyhtml",
     "server": "static-server -i index.html -f -d s3/",
     "start": "npm run clean && npm run s3 && npm run s3minifycss && npm run s3minifyhtml && static-server -i index.html -f -d s3/"
   },
@@ -26,10 +26,10 @@
   "homepage": "https://github.com/vladignatyev/crx-extractor#readme",
   "dependencies": {
     "htmlmin": "0.0.7",
-    "minify": "^2.0.13",
     "node-minify": "^2.0.2"
   },
   "devDependencies": {
+    "minify": "^9.1.0",
     "static-server": "^2.2.1"
   }
 }

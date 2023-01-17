@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-FVTW7P4');</script>
+<!-- End Google Tag Manager -->
+		<meta charset="UTF-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	   <script src="./tailwind.js"></script>
+		<title>Modding Hints for Minecraft - Morph Plus Add-on V5 (Ultimate Update). Guide.</title>
+		<style media="screen">
+			img {
+				width: 100%;
+			}
+			body {
+				overflow-x: hidden;
+			}
+
+
+						header {
+							padding-top: 56px !important;
+						}
+
+			.arrow-down{
+			  width:60px;
+			  height:40px;
+			  margin:0 0 160px -30px;
+			  position:fixed;
+			  left:50%;
+			  bottom:0px;
+			  -webkit-animation: arrow 0.5s 1s infinite ease-out alternate;
+
+			}
+/*
+			.arrow-down:hover{
+			   -webkit-animation-play-state: paused;
+			} */
+
+			.left{
+			  position:absolute;
+			  height:10px;
+			  width:40px;
+			  background:black;
+			  -webkit-transform:rotate(240deg);
+			  top:10px;
+			  left:10px;
+			  -webkit-border-radius:4px;
+			  -webkit-transform-origin:5px 50%;
+			  -webkit-animation: leftArrow 0.5s 1s infinite ease-out alternate;
+			}
+
+			.right{
+			  position:absolute;
+			  height:10px;
+			  width:40px;
+			  background:black;
+			  -webkit-transform:rotate(-60deg);
+			  top:10px;
+			  left:10px;
+			  -webkit-border-radius:4px;
+			  -webkit-transform-origin:5px 50%;
+			  -webkit-animation: rightArrow 0.5s 1s infinite ease-out alternate;
+			}
+
+
+
+
+			@-webkit-keyframes arrow{
+			  0% {
+			    bottom:0px;
+			  }
+			  100%{
+			    bottom:40px;
+			  }
+			}
+
+
+			@-webkit-keyframes leftArrow{
+			  0% {
+			  }
+			  100%{
+			    -webkit-transform:rotate(225deg);
+			  }
+			}
+
+			@-webkit-keyframes rightArrow{
+			  0% {
+			  }
+			  100%{
+			    -webkit-transform:rotate(-45deg);
+			  }
+			}
+
+		</style>
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+	     crossorigin="anonymous"></script>
+
+		<script type="text/javascript">
+			let lastKnownScrollPosition = 0;
+			let ticking = false;
+			let lastScrolling = new Date();
+			let isScrolling = false;
+
+
+			window.addEventListener("load", (event) => {
+
+				setInterval(()=>{
+					if (isScrolling) {
+						document.getElementById('arrow').style.display = "none";
+						isScrolling = false;
+					} else {
+						document.getElementById('arrow').style.display = "block";
+					}
+					console.log(isScrolling)
+					isScrolling = false
+				}, 1500)
+
+				document.addEventListener("scroll", (event) => {
+				  lastKnownScrollPosition = window.scrollY;
+
+				  if (!ticking) {
+				    window.requestAnimationFrame(() => {
+				      // doSomething(lastKnownScrollPosition);
+							isScrolling = true;
+				      ticking = false;
+				    });
+
+				    ticking = true;
+				  }
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<div id="arrow" class="arrow-down"><div class="left"></div><div class="right"></div></div>
+
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-FVTW7P4"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
+		<header class="bg-slate-800 text-center text-slate-300">
+			<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+			     crossorigin="anonymous"></script>
+			<!-- Basic responsive display ad -->
+			<ins class="adsbygoogle"
+			     style="display:block"
+			     data-ad-client="ca-pub-9423687387443767"
+			     data-ad-slot="2749869570"
+			     data-ad-format="auto"
+			     data-full-width-responsive="true"></ins>
+			<script>
+			     (adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
+
+			<div class="container mx-auto lead py-4 text-center">
+				<a href="./index.html"><img loading="lazy" alt="Modding Hints Logo." src="MODDING-HINTS.png" class="snap-center" style="height: 48px; width: auto; margin: 0 auto;"/></a><br/>
+				<a class="underline underline-offset-4" href="./index.html">🏠 Modding Hints for Minecraft</a> ❯ <a class="underline underline-offset-4" href="./index.html">Various Mods</a> ❯ Morph Plus Add-on V5
+			</div>
+		</header>
+
+
+		<article>
+			<div class="container mx-auto lead pb-16 pt-8 lg:w-1/2 px-8">
+				<img class="rounded mb-8 border w-auto shadow-stone-200 shadow-lg" src="./morph-mod/2.jpg" alt="Morph Mod Promo pictures. The morph menu where skeletons, zombies and other Minecraft mobs shown." />
+
+				<h1 class="text-6xl font-black pb-2">Morph Plus Add-on V5</h1>
+				<h2 class="text-2xl text-slate-400 font-black pb-8">Add-on for the official Minecraft Pocket Edition</h2>
+				<p class="pb-9 text-white text-sm">
+					<span class="rounded bg-slate-500 px-4 py-2">Minecraft&nbsp;PE&nbsp;1.18</span>
+					<span class="rounded bg-slate-500 px-4 py-2">Minecraft&nbsp;PE&nbsp;1.19</span>
+					<span class="rounded bg-slate-500 px-4 py-2">Latest</span>
+				</p>
+
+				<div class="lg:w-3/4 text-slate-800 py-4">
+					<p class="py-2">Have you ever dreamed of turning into zombie, skeleton, husk or fox in Minecraft? This add-on will make your dream comes real.</p>
+					<p class="py-2">Morph Mod turns your Minecraft avatar into one of supported mobs. You can easily manipulate this kind of morphing and enjoy new lifes in Minecraft.</p>
+					<p class="py-2">
+						<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+						 crossorigin="anonymous"></script>
+						<ins class="adsbygoogle"
+								 style="display:block; text-align:center;"
+								 data-ad-layout="in-article"
+								 data-ad-format="fluid"
+								 data-ad-client="ca-pub-9423687387443767"
+								 data-ad-slot="3340880609"></ins>
+						<script>
+								 (adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</p>
+
+					<p class="py-2">Now you can easily change your entire look and play as various rare and fun mobs in Minecraft. From fox to wither and even the wander.</p>
+					<p class="py-2">As usually, you have to install all required files in Minecraft and then follow carefully the instruction.</p>
+				</div>
+				<div class="lg:w-1/2 text-slate-800 py-4">
+					<h4 class="text-2xl">Credits</h4>
+					<ul class="text-slate-600 pb-4 text-sm">
+						<li>MohammedKHC</li>
+					</ul>
+				</div>
+
+				<div class="lg:w-1/2 text-slate-800 py-4">
+					<h4 class="text-2xl">Current version</h4>
+					<p class="text-slate-600 pb-4 text-sm">1.1.6</p>
+				</div>
+			</div>
+
+			<div class="container mx-auto pb-16 lg:w-1/2  px-8">
+				<div class="lg:w-3/4">
+
+
+					<h2 class="text-3xl text-slate-800 py-4">What is <em>a Mod</em> or <em>an Add-on</em>?</h2>
+					<p class="py-2 text-slate-800">An add-on for Minecraft is a special set of files. Typically this set contains two files: a behaviour pack and a resource pack.</p>
+					<p class="py-2 text-slate-800">Once loaded in Minecraft and applied according to guides and instructions, those files provide various new game features. It is common that such add-ons provide new items, new skins and textures, new mini-games available inside the Minecraft world.</p>
+					<p class="py-2 text-slate-800">Some add-ons comes bundled into a single file called .mcaddon. Add-ons of these type provide the same features as ones coming in resource pack and behaviour packs separated. It is up to add-on's author how to bundle and distribute his creations.</p>
+
+					<p class="py-2">
+						<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+						 crossorigin="anonymous"></script>
+						<ins class="adsbygoogle"
+								 style="display:block; text-align:center;"
+								 data-ad-layout="in-article"
+								 data-ad-format="fluid"
+								 data-ad-client="ca-pub-9423687387443767"
+								 data-ad-slot="3340880609"></ins>
+						<script>
+								 (adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</p>
+
+					<p class="py-2 text-slate-800">Exact content of the Minecraft add-ons is controlled by the author of the add-on.</p>
+					<p class="py-2 text-slate-800">Files has been packaged into an add-on are interpreted by the Minecraft engine. They work the same way as any other features in the Minecraft game itself. They can't make any harm to the user's device or damage user's files, because most of them are not executable on any OS except the Minecraft itself.</p>
+					<p class="py-2 text-slate-800">A process of creating such add-ons called modding. Likewise modding a car or modding a smartphone, modding makes the game more personalized. For example, there are some add-ons enhancing an in-game graphics or changing how mobs behave in game.</p>
+					<p class="py-2 text-slate-800">This page is dedicated to add-ons those enable various guns in Minecraft. Minecraft players can enjoy shooting and war games in Minecraft worlds by applying this add-ons in Minecraft and enable them for their worlds.</p>
+
+					<p class="py-2">
+						<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+						 crossorigin="anonymous"></script>
+						<ins class="adsbygoogle"
+								 style="display:block; text-align:center;"
+								 data-ad-layout="in-article"
+								 data-ad-format="fluid"
+								 data-ad-client="ca-pub-9423687387443767"
+								 data-ad-slot="3340880609"></ins>
+						<script>
+								 (adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</p>
+				</div>
+			</div>
+
+			<div class="container mx-auto pb-16 text-slate-800 lg:w-1/2  px-8">
+				<div class="lg:w-3/4">
+					<h2 class="text-3xl py-4">Get started</h2>
+					<p class="py-2">Once you downloaded all corresponding files it's time to get your hands dirty (ofc for the great good!). Follow the steps below to get add-on work in the Minecraft.</p>
+					<ol class="guide list-decimal ml-4">
+						<li class="py-2 text-sm">First, open every file using the system "Open in..." dialog in the Minecraft Pocket Edition.</li>
+						<li class="py-2 text-sm">Next, create a new world. Please notice that all experimental gameplay features should be enabled.</li>
+						<li class="py-2 text-sm">Choose behaviour packs and resource pack installed from the pane on the left side.</li>
+						<li class="py-2 text-sm">Start the newly created world.</li>
+						<li class="py-2 text-sm">You have to open a console in the game to type-in various commands to enable add-on items and get them in game.</li>
+					</ol>
+					<p class="py-4">Follow the detailed guide below to enable guns and other items from the add-on.</p>
+
+					<p class="py-2">
+						<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+						 crossorigin="anonymous"></script>
+						<ins class="adsbygoogle"
+								 style="display:block; text-align:center;"
+								 data-ad-layout="in-article"
+								 data-ad-format="fluid"
+								 data-ad-client="ca-pub-9423687387443767"
+								 data-ad-slot="3340880609"></ins>
+						<script>
+								 (adsbygoogle = window.adsbygoogle || []).push({});
+						</script>
+					</p>
+				</div>
+			</div>
+
+			<div class="container mx-auto pb-16 text-slate-800 lg:w-1/2  px-8">
+				<h3 class="text-3xl py-4">Whom can I morph into?</h3>
+				<p class="py-2">Morph Mod enables special abilities to your player those seem natural for mobs in game itself. For example, Warden has 250 HP and is ignored by monsters. While Fox has a huge jump. Axolotl can breathe under water and Witch can throw splash potions!</p>
+				<p class="py-2">There are endless opportunities could be explored when play with this mod enabled! This add-on enables 33 options to morph into!</p>
+
+				<p class="py-2">
+					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+					 crossorigin="anonymous"></script>
+					<ins class="adsbygoogle"
+							 style="display:block; text-align:center;"
+							 data-ad-layout="in-article"
+							 data-ad-format="fluid"
+							 data-ad-client="ca-pub-9423687387443767"
+							 data-ad-slot="3340880609"></ins>
+					<script>
+							 (adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</p>
+
+				<p class="py-2">The full list of mobs you can morph into contains 33 mobs: Zombie, Husk, Dorwned, Zombie Pigman, Enderman, Skeleton, Stray, Wither Skeleton, Creeper, Blaze, Cow, Pig, Sheep, Chicken, Spider, Iron Golem, Villager, Wolf, Cat, Bat, Slime, Snow Golem, Ghast, Vex, Bee, Horse, Witch, Axolotl, Shulker, Fox, Wither, Allay, Warden.</p>
+
+				<h3 class="text-3xl text-slate-800 py-4 mt-16">Let's start morphing!</h3>
+				<p class="py-2">Morphing requires killing the mob, so we need an enormous strength first</p>
+				<p class="mb-4 rounded border p-4 my-4">To get 99999 strengh, type in console: <strong>/effect @s strength 99999 255 true</strong></p>
+
+				<p class="py-2">
+					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+					 crossorigin="anonymous"></script>
+					<ins class="adsbygoogle"
+							 style="display:block; text-align:center;"
+							 data-ad-layout="in-article"
+							 data-ad-format="fluid"
+							 data-ad-client="ca-pub-9423687387443767"
+							 data-ad-slot="3340880609"></ins>
+					<script>
+							 (adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</p>
+
+				<p class="py-2">Now let's summon a Husk and kill him instantly. All you need to do that is to type in few commands in console.</p>
+
+				<p class="mb-4 rounded border p-4 my-4">To summon a Husk, type: <strong>/summon husk</strong></p>
+
+				<p><img loading="lazy" alt="Just summoned husk has been killed." src="./morph-mod/features/summon-husk-and-kill-him.jpg" /></p>
+
+				<p id="fold1" class="py-2">
+					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+					 crossorigin="anonymous"></script>
+					<ins class="adsbygoogle"
+							 style="display:block; text-align:center;"
+							 data-ad-layout="in-article"
+							 data-ad-format="fluid"
+							 data-ad-client="ca-pub-9423687387443767"
+							 data-ad-slot="3340880609"></ins>
+					<script>
+							 (adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</p>
+
+				<p class="py-2">Now you can morph into Husk! Sneak and jump to open up a Morph Menu.</p>
+				<p><img loading="lazy" alt="Morph menu opened in game." src="./morph-mod/features/morph-menu.jpg" /></p>
+				<p class="mb-4 rounded border p-4 my-4">To open the Morph Menu just: <strong>sneak and jump!</strong></p>
+
+				<p class="py-2">
+					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+					 crossorigin="anonymous"></script>
+					<ins class="adsbygoogle"
+							 style="display:block; text-align:center;"
+							 data-ad-layout="in-article"
+							 data-ad-format="fluid"
+							 data-ad-client="ca-pub-9423687387443767"
+							 data-ad-slot="3340880609"></ins>
+					<script>
+							 (adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</p>
+
+				<p class="py-2">There are two ways to open the Morph Menu. First one, "Sneak and Jump" sometimes doesn't work as expected. So you may prefer the related command in the console.</p>
+				<p class="py-2">Morph Menu is not just a way to morph into some mob. It is a way to morph out, return back to your normal player look and feel.</p>
+				<p class="mb-4 rounded border p-4 my-4">Sneak and jump hasn't worked? Try typing in console <strong>/mm</strong> and follow on screen hints!</p>
+
+				<p class="py-2">
+					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+					 crossorigin="anonymous"></script>
+					<ins class="adsbygoogle"
+							 style="display:block; text-align:center;"
+							 data-ad-layout="in-article"
+							 data-ad-format="fluid"
+							 data-ad-client="ca-pub-9423687387443767"
+							 data-ad-slot="3340880609"></ins>
+					<script>
+							 (adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</p>
+
+
+				<p class="py-2">Try morphing into Fox! Just summon Fox, then kill her and then morph using the Morph Menu. Here is how all of that looks in the end. Isn't it a funny trick? 😂</p>
+				<p><img loading="lazy" alt="Minecraft player morphed into Fox." src="./morph-mod/features/morphed-to-fox.jpg" /></p>
+
+				<h3 class="text-3xl text-slate-800 py-4 mt-16">Mobs special abilities</h3>
+				<p class="py-2">As we said above, every mob has special abilities. Morphing into mobs gives special abilities to your player too. It is really worth to try it out!</p>
+				<p>
+					<h4 class="text-2xl text-slate-800 py-4 mt-16">Zombie</h4>
+
+					<p><img loading="lazy" alt="Minecraft player morphed into Zombie." src="./morph-mod/features/summon-zombie.jpg" /></p>
+					<pre>
+Ignored By monsters
+Attacked by Iron Golems
+Attack damage = 1.5 hearts
+Killing a villager cause his zombification
+Burns in day light
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Husk</h4><pre>
+Ignored By monsters
+Attacked by Iron Golems
+Taller than 2 blocks
+Attack damage = 1.5 hearts
+Killing a villager cause his zombification
+Give Hunger effect to target
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Drowned</h4><pre>
+Ignored By monsters
+Attacked by Iron Golems
+Attack damage = 1.5 hearts
+Killing a villager cause his zombification
+Burns in day light
+Breath in water
+Fast Swim
+
+<p class="py-2">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+	 crossorigin="anonymous"></script>
+	<ins class="adsbygoogle"
+			 style="display:block; text-align:center;"
+			 data-ad-layout="in-article"
+			 data-ad-format="fluid"
+			 data-ad-client="ca-pub-9423687387443767"
+			 data-ad-slot="3340880609"></ins>
+	<script>
+			 (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Zombie Pigman</h4><pre>
+Ignored By monsters
+Attacked by Iron Golems
+Attack damage = 2.5 hearts
+Killing a villager cause his zombification
+Immune to fire and lava
+Have Golden sword
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Enderman</h4><pre>
+Ignored By monsters
+Attacked by Iron Golems
+Life = 20 hearts
+Attack damage = 3.5 hearts
+Height 3 blocks, you can't pass trough door
+Can Teleport
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Skeleton</h4><pre>
+Ignored By monsters
+Attacked by Iron Golems
+Attack damage = 1.5 hearts
+Burns in day light
+Have Bow
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Stray</h4>
+	<p class="py-2">
+		<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+		 crossorigin="anonymous"></script>
+		<ins class="adsbygoogle"
+				 style="display:block; text-align:center;"
+				 data-ad-layout="in-article"
+				 data-ad-format="fluid"
+				 data-ad-client="ca-pub-9423687387443767"
+				 data-ad-slot="3340880609"></ins>
+		<script>
+				 (adsbygoogle = window.adsbygoogle || []).push({});
+		</script>
+	</p>
+Ignored By monsters
+Attacked by Iron Golems
+Attack damage = 1.5 hearts
+Burns in day light
+Have Bow</pre></p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Wither Skeleton</h4>
+<p><img loading="lazy" alt="Minecraft player morphed into Wither Skeleton." src="./morph-mod/features/summoned.jpg" /></p>
+<pre>
+Ignored By monsters
+Attacked by Iron Golems
+Attack damage = 2 hearts
+Immune to fire and lava
+taller than 2 blocks
+Have Stone sword
+Give Wither effect to target</pre></p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Creeper</h4><pre>
+Ignored by monsters
+Long press with Explode item to explode</pre></p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Blaze</h4><pre>
+Ignored by monsters
+Attacked by iron golems
+Attack damage = 3 hearts
+Immune to fire and lava
+Can fly if you activate Education Edition
+You can shoot fire with Fire Shooter</pre></p>
+<p class="py-2">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+	 crossorigin="anonymous"></script>
+	<ins class="adsbygoogle"
+			 style="display:block; text-align:center;"
+			 data-ad-layout="in-article"
+			 data-ad-format="fluid"
+			 data-ad-client="ca-pub-9423687387443767"
+			 data-ad-slot="3340880609"></ins>
+	<script>
+			 (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Cow</h4><pre>
+Ignored by monsters
+Life = 5 hearts
+Can get milk from yourself</pre></p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Pig</h4><pre>
+Ignored by monsters
+Life = 5 hearts
+Shorter than 1 block</pre>
+
+<p><img loading="lazy" alt="Minecraft player morphed into Warden." src="./morph-mod/1.jpg" /></p>
+
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Sheep</h4><pre>
+Usually ignored by monsters
+Life = 4 hearts
+Can grazing Grass if you Sneak and lock at ground
+Can get wool from yourself</pre></p>
+<p class="py-2">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+	 crossorigin="anonymous"></script>
+	<ins class="adsbygoogle"
+			 style="display:block; text-align:center;"
+			 data-ad-layout="in-article"
+			 data-ad-format="fluid"
+			 data-ad-client="ca-pub-9423687387443767"
+			 data-ad-slot="3340880609"></ins>
+	<script>
+			 (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Chicken</h4><pre>
+Ignored by monsters
+Life = 2 hearts
+Shorter than 1 block
+Drops eggs between 300 to 600 second</pre></p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Spider</h4><pre>
+Ignored by monsters
+Life = 8 hearts
+If you sneak you will start climb</pre></p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Iron Golem</h4><pre>
+Life = 50 hearts
+Attack damage varies between 7 and 21
+Knockback resistance</pre></p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Knockback mobs</h4><pre>
+3 blocks tall
+1.5 blocks large
+Don't have fall damage</pre></p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Villager</h4><pre>
+Only zombies will attack you
+Shorter than 1 block
+If you sneak and long press in the ground you will trade with yourself</pre></p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Wolf</h4><pre>
+Ignored by monsters
+Life = 3 hearts
+Shorter than 1 block
+If you sneak you will set</pre></p>
+<p class="py-2">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+	 crossorigin="anonymous"></script>
+	<ins class="adsbygoogle"
+			 style="display:block; text-align:center;"
+			 data-ad-layout="in-article"
+			 data-ad-format="fluid"
+			 data-ad-client="ca-pub-9423687387443767"
+			 data-ad-slot="3340880609"></ins>
+	<script>
+			 (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Cat</h4><pre>
+Ignored by monsters
+Shorter than 1 block
+If you sneak you will set
+Don't have fall damage
+Creepers are afraid of you</pre></p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Bat</h4><pre>
+Ignored by monsters
+Life = 6 hearts
+Have Night vision effect
+Can fly if you activate Education Edition</pre>
+
+<p><img loading="lazy" alt="Minecraft player morphed into Warden." src="./morph-mod/3.jpg" /></p>
+
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Slime</h4><pre>
+Life = 8 hearts
+Ignored By monsters
+Attacked by Iron Golems
+Attack damage = 2 hearts
+Divide when he dies</pre></p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Snow Golem</h4><pre>
+Life = 2 hearts
+Attack damage = 1 hearts
+Set Snow layer where you walk
+Don't have Fall damage
+You can shoot Snowball with Snowball Shooter</pre></p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Ghast</h4>
+
+<pre>
+Life = 5 hearts
+Ignored By monsters
+Attacked by Iron Golems
+Attack damage = 1 hearts
+Immune to fire and lava
+Don't have Fall damage
+Can fly if you activate Education Edition
+You can shoot fire with Fire Shooter</pre>
+<p class="py-2">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+	 crossorigin="anonymous"></script>
+	<ins class="adsbygoogle"
+			 style="display:block; text-align:center;"
+			 data-ad-layout="in-article"
+			 data-ad-format="fluid"
+			 data-ad-client="ca-pub-9423687387443767"
+			 data-ad-slot="3340880609"></ins>
+	<script>
+			 (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Vex</h4><pre>
+Life = 7 hearts
+Ignored By monsters
+Attacked by Iron Golems
+Attack damage = 1.5 hearts
+Can go spectator if you Sneak and tap on the ground
+Immune to fire and lava
+Don't have Fall damage
+Have Iron sword</pre>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Bee</h4><pre>
+Life = 5 hearts
+Ignored By monsters
+Attacked by Iron Golems
+Attack damage = 1 hearts
+Can go into Bee nest if you jumping and stand under Bee nest block
+Give Poison effect to target</pre>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Horse</h4><pre>
+Life varies between 7.5 and 15 hearts
+Have andom jump
+Ignored By monsters
+Can put Saddle on yourself if you hold it in your hand and click on the ground
+Other Players will can ride you if you put Saddle on yourself</pre>
+<p class="py-2">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+	 crossorigin="anonymous"></script>
+	<ins class="adsbygoogle"
+			 style="display:block; text-align:center;"
+			 data-ad-layout="in-article"
+			 data-ad-format="fluid"
+			 data-ad-client="ca-pub-9423687387443767"
+			 data-ad-slot="3340880609"></ins>
+	<script>
+			 (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Witch</h4><pre>
+Life = 13 hearts
+Attack damage = 2 hearts
+Can Throw Splash Potions
+Get Potions when take high damage</pre>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Axolotl</h4><pre>
+Life = 7 hearts
+Ignored By monsters
+Your friends can catch you in the bucket if long press while hold Water Bucket on you
+Attack damage = 2 hearts
+Breath in water
+Very fast Swim
+die after 5 minutes if don't go to water</pre>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Shulker</h4><pre>
+Life = 15 hearts
+Ignored By monsters
+Attacked by Iron Golems
+Attack damage = 1.5 hearts
+Can shoot Shulker bullets
+Random tp when take high damage</pre>
+<p class="py-2">
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+	 crossorigin="anonymous"></script>
+	<ins class="adsbygoogle"
+			 style="display:block; text-align:center;"
+			 data-ad-layout="in-article"
+			 data-ad-format="fluid"
+			 data-ad-client="ca-pub-9423687387443767"
+			 data-ad-slot="3340880609"></ins>
+	<script>
+			 (adsbygoogle = window.adsbygoogle || []).push({});
+	</script>
+</p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Fox</h4><pre>
+Life = 10 hearts
+Ignored By monsters
+Attack damage = 2 hearts
+Have high jump
+If jump on a smaller thing (like Chicken, Fish, Small Turtle) will kill it</pre>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Wither</h4>
+<p><img loading="lazy" alt="Minecraft player morphed into Wither." src="./morph-mod/features/morphed-into-wither.jpg" /></p>
+<pre>
+Life = 300 hearts
+Ignored By monsters
+Attacked by Iron Golems
+Immune to fire and lava
+Don't take Fall damage
+Dont take damage from undead mobs
+Can fly if you activate Education Edition
+Can shoot Wither Skull for three times then can shoot one Dangerous Wither Skull
+When Morphing to it you will need to wait 10 seconds while it summoned</pre>
+
+<p><img loading="lazy" alt="Minecraft player morphed into Warden." src="./morph-mod/4.jpg" /></p>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Allay</h4><pre>
+Ignored By monsters
+Don't take Fall damage
+Can fly if you activate Education Edition
+Can find any item that dropped on the ground and on your inventory (at 50 block radius)</pre>
+<h4 class="text-2xl text-slate-800 py-4 mt-16">Warden</h4>
+
+<p><img loading="lazy" alt="Minecraft player morphed into Warden." src="./morph-mod/features/morphed-into-warden.jpg" /></p>
+<pre>
+Life = 250 hearts
+Ignored By monsters
+Attacked by Iron Golems
+Immune to fire and lava
+Attack damage = 15 hearts
+Has knockback resistance
+Can shoot Sonic Boom
+Every 6 seconds if there's an player near you it will roar and give Darkness effect to the player
+				</pre>
+
+				<p class="py-2">
+					<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9423687387443767"
+							 crossorigin="anonymous"></script>
+					<ins class="adsbygoogle"
+							 style="display:block"
+							 data-ad-format="autorelaxed"
+							 data-ad-client="ca-pub-9423687387443767"
+							 data-ad-slot="1852501122"></ins>
+					<script>
+							 (adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</p>
+			</div>
+
+			<div class="container mx-auto pb-16 text-slate-800 lg:w-1/2  px-8">
+				<h3 id="disclaimer" class="text-3xl py-4">DISCLAIMER</h3>
+				<p class="py-4">IT IS NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG.</p>
+				<p>The Minecraft name, the Minecraft brand, and Minecraft is the property
+				of Mojang AB or a respected owner.</p>
+				<p>With respect to <a class="underline underline-offset-4 text-cyan-600" href="https://account.mojang.com/documents/brand_guidelines" rel="nofollow" target="_blank">Mojang Brand Guidelines</a></p>
+			</div>
+
+
+		</article>
+
+	</body>
+</html>
