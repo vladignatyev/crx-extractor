@@ -18,7 +18,7 @@ $(function(){
   function getExtensionIdFromLink(link) {
     var parser = document.createElement('a');
     parser.href = link;
-    if (parser.host != 'chrome.google.com') {
+    if (parser.host != 'chrome.google.com' && parser.host != 'chromewebstore.google.com') {
       return;
     }
 
@@ -273,17 +273,17 @@ $(function(){
   var newSuggestionBtn = $('#crx-suggestion i');
 
   var crxExamples = [
-    ['Dark Reader', 'https://chrome.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh'],
-    ['Custom Cursor For Chrome', 'https://chrome.google.com/webstore/detail/custom-cursor-for-chrome/ogdlpmhglpejoiomcodnpjnfgcpmgale'],
-    ['Block Site', 'https://chrome.google.com/webstore/detail/block-site-website-blocke/eiimnmioipafcokbfikbljfdeojpcgbh'],
-    ['AdBlock Plus', 'https://chrome.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb'],
-    ['Blur', 'https://chrome.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd'],
-    ['LastPass Free Password Manager', 'https://chrome.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd'],
-    ['Mercury Reader', 'https://chrome.google.com/webstore/detail/mercury-reader/oknpjjbmpnndlpmnhmekjpocelpnlfdi'],
-    ['Pixlr', 'https://chrome.google.com/webstore/detail/pixlr-editor/icmaknaampgiegkcjlimdiidlhopknpk'],
-    ['Pushbullet', 'https://chrome.google.com/webstore/detail/pushbullet/chlffgpmiacpedhhbkiomidkjlcfhogd/'],
-    ['Awesome Screenshot', 'https://chrome.google.com/webstore/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj'],
-    ['ColorZilla', 'https://chrome.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp'],
+    ['Dark Reader', 'https://chromewebstore.google.com/webstore/detail/dark-reader/eimadpbcbfnmbkopoojfekhnkhdbieeh'],
+    ['Custom Cursor For Chrome', 'https://chromewebstore.google.com/webstore/detail/custom-cursor-for-chrome/ogdlpmhglpejoiomcodnpjnfgcpmgale'],
+    ['Block Site', 'https://chromewebstore.google.com/webstore/detail/block-site-website-blocke/eiimnmioipafcokbfikbljfdeojpcgbh'],
+    ['AdBlock Plus', 'https://chromewebstore.google.com/webstore/detail/adblock-plus/cfhdojbkjhnklbpkdaibdccddilifddb'],
+    ['Blur', 'https://chromewebstore.google.com/webstore/detail/blur/epanfjkfahimkgomnigadpkobaefekcd'],
+    ['LastPass Free Password Manager', 'https://chromewebstore.google.com/webstore/detail/lastpass-free-password-ma/hdokiejnpimakedhajhdlcegeplioahd'],
+    ['Mercury Reader', 'https://chromewebstore.google.com/webstore/detail/mercury-reader/oknpjjbmpnndlpmnhmekjpocelpnlfdi'],
+    ['Pixlr', 'https://chromewebstore.google.com/webstore/detail/pixlr-editor/icmaknaampgiegkcjlimdiidlhopknpk'],
+    ['Pushbullet', 'https://chromewebstore.google.com/webstore/detail/pushbullet/chlffgpmiacpedhhbkiomidkjlcfhogd/'],
+    ['Awesome Screenshot', 'https://chromewebstore.google.com/webstore/detail/awesome-screenshot-screen/nlipoenfbbikpbjkfpfillcgkoblgpmj'],
+    ['ColorZilla', 'https://chromewebstore.google.com/webstore/detail/colorzilla/bhlhnicpbhignbdhedgjhgdocnmhomnp'],
   ];
 
   var suggestion = 0;
